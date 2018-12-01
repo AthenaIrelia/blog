@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router  from 'vue-router'
+import 'common/stylus/index.styl'
 Vue.config.productionTip = false
+import router from './Router'
+
 
 new Vue({
   render: h => h(App),
