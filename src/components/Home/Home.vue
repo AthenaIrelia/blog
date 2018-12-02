@@ -34,16 +34,15 @@
         </div>
       </div>
     </div>
-    <bottom></bottom>
   </div>
 </template>
 
 <script>
-import Bottom from "./Bottom.vue";
+
 export default {
-  components: {
-    Bottom
-  },
+  // components: {
+  //   Bottom
+  // },
   data() {
     return {
       box: [
@@ -104,7 +103,6 @@ export default {
   overflow: hidden;
   margin: 0px auto 110px;
   position: relative;
-  z-index: 200;
 
   .post-lists-body {
     &.post-lists-body div {

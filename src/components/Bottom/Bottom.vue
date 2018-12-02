@@ -36,7 +36,7 @@ export default {
   height: auto;
   background-color: #fff;
   position: fixed;
-  z-index: 201;
+  z-index: 15;
   bottom: 0px;
 
   .footer-social {
