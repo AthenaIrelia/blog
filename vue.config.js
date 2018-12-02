@@ -23,6 +23,7 @@ module.exports = {
           '@': path.resolve(__dirname, './src'),
           'components': path.resolve(__dirname, './src/components'),
           'common': path.resolve(__dirname, './src/common'),
+          'base': path.resolve(__dirname, './src/base'),
           'vue$': 'vue/dist/vue.esm.js'
         }
       }

@@ -7,8 +7,14 @@
           <div class="bg-box">
             <div class="bg-size">
               <div class="bg"></div>
-              <div class="lucency">
-                <p>12131</p>
+              <div class="lucency"></div>
+              <div class="introduce">
+                <p>
+                  使用纯CSS实现文字超过一定
+                  的长度后自动显示省略号
+                  使用纯CSS实现文字超过一定
+                  的长度后自动显示省略号
+                </p>
               </div>
             </div>
             <div class="bg-box1">
@@ -28,11 +34,16 @@
         </div>
       </div>
     </div>
+    <bottom></bottom>
   </div>
 </template>
 
 <script>
+import Bottom from "./Bottom.vue";
 export default {
+  components: {
+    Bottom
+  },
   data() {
     return {
       box: [
@@ -50,7 +61,31 @@ export default {
         { text: "代驾" }
       ]
     };
-  }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.scrollBottem);
+  },
+  methods: {
+    scrollBottem() {
+      let winHeight = window.innerHeight, //窗口高度
+        bodyHeight = document.documentElement.scrollHeight, // 页面高度
+        boduTop = document.documentElement.scrollTop; // 滚动条上的高度
+      // console.log(this.box);
+
+      if (bodyHeight - boduTop - winHeight <= 100) {
+        if (this.loadFlag) {
+          return;
+        }
+        // 将标志位置为真 表示真正加载
+        this.loadFlag = true;
+        // 延时加载 ,,,,,因为本地加载速度太快  ... 就延时了一下
+        setTimeout(async () => {
+          this.box.push({ text: "巴士" }, { text: "巴士" }, { text: "巴士" });
+          this.loadFlag = false;
+        }, 600);
+      }
+    }
+  },
 };
 </script>
 <style lang='stylus' scoped>
@@ -60,14 +95,15 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
+  top: 100px;
+  position: relative;
 }
 
 .center {
   width: 900px;
-  height: 1640px;
-  margin: 0px auto;
+  overflow: hidden;
+  margin: 0px auto 110px;
   position: relative;
-  top:100px;
   z-index: 200;
 
   .post-lists-body {
@@ -102,6 +138,10 @@ export default {
             transform: scale(1.2);
           }
 
+          &:hover> .introduce {
+            display: block;
+          }
+
           .bg {
             width: 100%;
             height: 250px;
@@ -126,6 +166,35 @@ export default {
             display: none;
             -moz-opacity: 0.6;
             opacity: 0.6;
+          }
+
+          .introduce {
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            padding: 40px 28px;
+            z-index: 214;
+            display: none;
+
+            p {
+              overflow: hidden;
+              height: 135px;
+              font-size: 15px;
+              margin: 0;
+              line-height: 26px;
+              word-break: break-all;
+              opacity: 2;
+              color: #fff;
+              position: relative;
+            }
+
+            p:after {
+              content: '...';
+              width: 16px;
+              color: #fff;
+            }
           }
         }
 
