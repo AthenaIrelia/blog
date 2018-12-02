@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-  <div class="bgcolor">Archives</div>
+  <div class="bgcolor">
+    
+  </div>
 </template>
 
 <script>

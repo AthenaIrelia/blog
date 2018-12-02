@@ -21,5 +21,18 @@ export default {
 #app {
   position: relative;
   z-index: 2;
+  
+}
+::selection{
+background:#eb5055;
+color:#ffffff;
+}
+::-moz-selection{
+background:#eb5055;
+color:#ffffff;
+}
+::-webkit-selection{
+background:#eb5055;
+color:#ffffff;
 }
 </style>
