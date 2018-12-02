@@ -43,7 +43,10 @@ export default {
   width: 100%;
   height: 70px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  background-color : #fff ;
+  background-color: #fff;
+  position: fixed;
+  margin-bottom: 40px;
+  z-index: 9999;
 
   .center {
     position: relative;
