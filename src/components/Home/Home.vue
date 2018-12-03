@@ -10,10 +10,7 @@
               <div class="lucency"></div>
               <div class="introduce">
                 <p>
-                  使用纯CSS实现文字超过一定
-                  的长度后自动显示省略号
-                  使用纯CSS实现文字超过一定
-                  的长度后自动显示省略号
+                  {{item.info}}
                 </p>
               </div>
             </div>
@@ -23,11 +20,11 @@
             </div>
             <div class="content">
               <div class="item-title">
-                <a href="#">XXXXXX</a>
+                <a href="#">{{item.title}}</a>
               </div>
               <div class="item-icon">
                 <div class="icon"></div>
-                <a href="#">sss</a>
+                <a href="#">{{item.id}}</a>
               </div>
             </div>
           </div>
@@ -44,24 +41,14 @@ export default {
   // },
   data() {
     return {
-      box: [
-        { text: "巴士" },
-        { text: "快车" },
-        { text: "专车" },
-        { text: "顺风车" },
-        { text: "出租车" },
-        { text: "代驾" },
-        { text: "巴士" },
-        { text: "快车" },
-        { text: "专车" },
-        { text: "顺风车" },
-        { text: "出租车" },
-        { text: "代驾" }
-      ]
+      box: []
     };
   },
   mounted() {
     window.addEventListener("scroll", this.scrollBottem);
+    this.$axios.get('http://111.230.249.24:8080/BucaiBlog/ArticlePage?limit=10&offset=0').then((data)=>{
+      this.box= data.data.list      
+    })  
   },
   methods: {
     scrollBottem() {
@@ -147,7 +134,7 @@ export default {
             width: 100%;
             height: 250px;
             cursor: pointer;
-            background-image: url('./logo@3x.png');
+            background-image:url('./logo@3x.png')
             background-position: 50% 50%;
             background-size: cover;
             transition: all 0.6s;

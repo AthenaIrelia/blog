@@ -24,6 +24,13 @@
         </div>
         <p>备注：默认申请友情链接均为内页（当前页面）</p>
         <h3 class="information">基本信息</h3>
+        <pre>
+         <code>
+           网站名称：XXXXX
+           网站地址：www.XXXXX.com
+         </code>
+        </pre>
+        <p>暂时先这样，同时欢迎互换友链，这个页面留言即可。 ^_^</p>
       </div>
     </div>
   </div>
@@ -137,6 +144,20 @@ export default {
 
       .information {
         margin-top: 35px;
+      }
+
+      pre {
+        margin: 20px 0;
+        border-radius: 4px;
+
+        code {
+          display: block;
+          line-height: 20px;
+          margin: 0;
+          padding: 1.3em;
+          color: #313131;
+          background-color: #f7f7f7;
+        }
       }
     }
   }
