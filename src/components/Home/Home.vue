@@ -38,7 +38,6 @@
 </template>
 
 <script>
-
 export default {
   // components: {
   //   Bottom
@@ -84,7 +83,7 @@ export default {
         }, 600);
       }
     }
-  },
+  }
 };
 </script>
 <style lang='stylus' scoped>
@@ -126,6 +125,10 @@ export default {
           position: relative;
           overflow: hidden;
           padding: 0;
+
+          &:hover {
+            cursor: pointer;
+          }
 
           &:hover >.lucency {
             display: block;
