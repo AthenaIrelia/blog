@@ -4,13 +4,17 @@ import About from 'components/About/About.vue'
 import Archives from 'components/Archives/Archives.vue'
 import Home from 'components/Home/Home.vue'
 import Links from 'components/Links/Links.vue'
-import Search from 'components/Search/Search.vue'
+import Music from 'components/Music/Music.vue'
+import Login from 'components/Login/Login.vue'
+import Admin from 'components/Admin/Admin.vue'
+import Essay from 'base/essay/essay.vue'
+import FriendshipLink from 'base/friendshipLink/friendshipLink.vue'
+import HomePage from 'base/homePage/homePage.vue'
 
 Vue.use(Router)
 
 export default new Router({
-    routes: [ 
-        {
+    routes: [{
             path: '/',
             redirect: '/Home'
         },
@@ -31,11 +35,29 @@ export default new Router({
             component: Links
         },
         {
-            path: '/Search',
-            component: Search
+            path: '/Music',
+            component: Music
         },
+        {
+            path: '/Login',
+            component: Login
+        },
+        {
+            path: '/Admin',
+            component: Admin,
+            children: [{
+                    path: "Essay",
+                    component: Essay
+                },
+                {
+                    path: "FriendshipLink",
+                    component: FriendshipLink
+                },
+                {
+                    path: "HomePage",
+                    component: HomePage
+                }
+            ]
+        }
     ]
 })
-
-
-

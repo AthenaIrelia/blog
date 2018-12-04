@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-  <div>search</div>
+  <div class="bgcolor"></div>
 </template>
 
 <script>
@@ -18,7 +18,13 @@
 
 //   methods: {}
 // }
-
 </script>
 <style lang='stylus' scoped>
+.bgcolor {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  top: 100px;
+  position: relative;
+}
 </style>

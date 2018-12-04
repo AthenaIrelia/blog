@@ -33,18 +33,22 @@
         <p>暂时先这样，同时欢迎互换友链，这个页面留言即可。 ^_^</p>
       </div>
     </div>
+   <message-board></message-board>
   </div>
 </template>
 
 <script>
+import MessageBoard from "base/message-board/message-board.vue";
 export default {
   data() {
     return {
       num: [1, 2, 3, 4, 1, 2, 3, 41, 2, 3, 41, 2, 3, 41, 2, 3, 41, 2, 3, 4]
     };
-  }
+  },
 
-  //   components: {},
+  components: {
+    MessageBoard
+  }
 
   //   computed: {},
 

@@ -15,8 +15,8 @@
         <router-link tag="div" to="/About">
           <span>About</span>
         </router-link>
-        <router-link tag="div" to="/Search">
-          <span>Search</span>
+        <router-link tag="div" to="/Music">
+          <span>Music</span>
         </router-link>
       </div>
     </div>
