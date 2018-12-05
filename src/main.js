@@ -5,6 +5,7 @@ import axios from 'axios'
 Vue.config.productionTip = false
 import router from './Router'
 
+
 Vue.prototype.$axios = axios
 new Vue({
   render: h => h(App),

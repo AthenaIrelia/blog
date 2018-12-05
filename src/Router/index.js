@@ -10,6 +10,7 @@ import Admin from 'components/Admin/Admin.vue'
 import Essay from 'base/essay/essay.vue'
 import FriendshipLink from 'base/friendshipLink/friendshipLink.vue'
 import HomePage from 'base/homePage/homePage.vue'
+import Add from 'base/add/add.vue'
 
 Vue.use(Router)
 
@@ -46,8 +47,11 @@ export default new Router({
             path: '/Admin',
             component: Admin,
             children: [{
+                    path: '/',
+                    redirect: 'HomePage'
+                }, {
                     path: "Essay",
-                    component: Essay
+                    component: Essay,
                 },
                 {
                     path: "FriendshipLink",
@@ -56,6 +60,10 @@ export default new Router({
                 {
                     path: "HomePage",
                     component: HomePage
+                },
+                {
+                    path: "Add",
+                    component: Add
                 }
             ]
         }

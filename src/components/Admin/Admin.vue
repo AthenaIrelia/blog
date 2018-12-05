@@ -41,14 +41,14 @@ export default {
 
 .bgcolor {
   width: 100%;
-  height: 100%;
   top: 68px;
   position: relative;
 
   .nav {
-    position: absolute;
-    top: 80px;
-    left: 5%;
+    padding: 30px;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
 
     .router-link-active {
       color: #eb5055;
@@ -69,6 +69,7 @@ export default {
       line-height: 50px;
       font-size: 18px;
       text-align: center;
+      float: left;
     }
 
     .box:hover {
