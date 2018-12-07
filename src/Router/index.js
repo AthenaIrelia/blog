@@ -11,6 +11,7 @@ import Essay from 'base/essay/essay.vue'
 import FriendshipLink from 'base/friendshipLink/friendshipLink.vue'
 import HomePage from 'base/homePage/homePage.vue'
 import Add from 'base/add/add.vue'
+import Add1 from 'base/add1/add1.vue'
 
 Vue.use(Router)
 
@@ -64,6 +65,10 @@ export default new Router({
                 {
                     path: "Add",
                     component: Add
+                },
+                {
+                    path: "Add1",
+                    component: Add1
                 }
             ]
         }

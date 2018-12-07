@@ -5,24 +5,31 @@
       <div class="title">标题</div>
       <input type="text" autocomplete="off" placeholder="请输入标题" class="el-input__inner">
     </div>
-    <div class="brief">
-      <textarea
-        autocomplete="off"
-        placeholder="请输入简介"
-        class="el-textarea__inner"
-        style="min-height: 96px; height: 96px;"
-      ></textarea>
+    <div class="title-box">
+      <div class="title">备注</div>
+      <input type="text" autocomplete="off" placeholder="请输入备注" class="el-input__inner">
     </div>
-    <mavon-editor v-model="something" defaultOpen="preview"/>
+    <div class="title-box">
+      <div class="title">链接地址</div>
+      <input type="text" autocomplete="off" placeholder="请输入链接地址" class="el-input__inner">
+    </div>
+    <div class="title-box">
+      <div class="title">图标地址</div>
+      <input type="text" autocomplete="off" placeholder="请输入图标地址" class="el-input__inner">
+    </div>
+    <div class="change">
+      <div class="place">
+        <div class="ture style">确定</div>
+        <div class="cancle style">取消</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      something: ""
-    };
+    return {};
   },
 
   components: {},
@@ -36,7 +43,6 @@ export default {
 </script>
 <style lang='stylus' scoped>
 @import '~common/stylus/index.styl';
-@import '~./index.css';
 
 .center {
   width: 900px;
@@ -48,7 +54,7 @@ export default {
   .title-box {
     width: 100%;
     height: 50px;
-    // padding: 15px 0;
+    padding: 15px 0;
     line-height: normal;
     display: inline-table;
     width: 100%;
@@ -89,29 +95,35 @@ export default {
     }
   }
 
-  .brief {
-    display: inline-block;
+  .change {
     width: 100%;
-    vertical-align: bottom;
-    font-size: 14px;
-    padding: 30px 0;
+    height: 50px;
+    position: relative;
 
-    .el-textarea__inner {
-      display: block;
-      resize: vertical;
-      padding: 5px 15px;
-      line-height: 1.5;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 100%;
-      font-size: inherit;
-      color: #606266;
-      background-color: #fff;
-      background-image: none;
-      border: 1px solid #dcdfe6;
-      border-radius: 4px;
-      -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-      transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    .place {
+      position: absolute;
+      right: 0;
+
+      .style {
+        width: 60px;
+        height: 100%;
+        text-align: center;
+        float: left;
+        line-height: 50px;
+        border-radius: 10px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+
+      .ture {
+        color: #fff;
+        background-color: #f9a7b5;
+      }
+
+      .cancle {
+        color: black;
+        background-color: #fff;
+      }
     }
   }
 }

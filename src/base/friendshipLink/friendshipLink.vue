@@ -1,7 +1,7 @@
 <!--  -->
 <template>
   <div class="bgbox">
-    <router-link class="box" tag="div" to="/Admin/Add">
+    <router-link class="box" tag="div" to="/Admin/Add1">
       <span>添加友链</span>
     </router-link>
     <form-fontrol></form-fontrol>
